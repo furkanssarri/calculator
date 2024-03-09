@@ -12,6 +12,9 @@ section .display-area {
   justify-content: center;
   align-items: center;
 }
+section .display-area span:first-child {
+  background-color: rgb(49, 133, 207);
+}
 section .calculator {
   display: flex;
 }
