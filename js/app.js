@@ -3,7 +3,7 @@ const digits = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
 const utilities = document.querySelectorAll(".utility");
 const buttons = document.querySelectorAll(".buton");
-const displayFirst = document.querySelectorAll(".display-area span");
+const displayFirst = document.querySelector(".display-area span");
 // const displaySecond = document.querySelectorAll(".display-area span");
 // Variables
 let a;
