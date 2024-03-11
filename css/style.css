@@ -9,20 +9,26 @@ section {
 section .display-area {
   border: 1px solid #000;
   height: 50px;
-  justify-content: center;
-  align-items: center;
+  text-align: end;
 }
-section .display-area span:first-child {
-  background-color: rgb(49, 133, 207);
+section .display-area span {
+  padding: 1px;
+  margin: 1px;
+  min-height: 24px;
+  display: block;
 }
 section .calculator {
   display: flex;
+  width: 400px !important;
 }
 section .calculator .numbers {
+  width: 100%;
   border-right: 1px solid #000;
+  gap: 5px;
 }
 section .calculator .numbers .numbers-row {
   margin-left: 0 !important;
+  gap: 5px;
 }
 section .calculator .numbers .numbers-row .utility {
   background-color: #a4e2f7 !important;
@@ -32,10 +38,6 @@ section .calculator .numbers .numbers-row .number {
 }
 section .calculator .numbers .numbers-row .operator {
   background-color: #f7a4c7;
-}
-section .calculator .numbers .numbers-row .buttons {
-  width: 51.7px;
-  height: auto;
 }
 section .calculator .operators {
   display: flex;
@@ -47,8 +49,6 @@ section .calculator .operators {
   border-bottom: 1px solid #000 !important;
   border-left: 1px solid #000 !important;
   border-radius: 0px !important;
-  width: auto;
-  height: auto;
 }
 
 #equals {

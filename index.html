@@ -1,65 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="style/style.css">
    <!--Bootstrap CSS-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> -->
+      <!--FontAwesome 5-->
+      <script src="https://kit.fontawesome.com/a4cf3a1ade.js" crossorigin="anonymous"></script>
    <title>Calculator</title>
 </head>
-
 <body>
-   <h1>CALCULATOR</h1>
-
-   <section class="container d-flex justify-content-center">
-         <div class="row col-md-4 flex-column">
-            <div class="calculator flex-column">
-               <div class="display-area d-flex">
-                  <span> </span>
-                  <span> </span>
-               </div>
-               <div class="numbers d-flex flex-column gx-5">
-                  <div class="row numbers-row">
-                     <button value="ac" class="utility buttons buton btn">AC</button>
-                     <button value="c" class="utility buttons buton btn">C</button>
-                     <button value="modulus" class="utility buttons buton btn">%</button>
-                     <button value="division" class=" operator buttons buton btn">/</button>
-                  </div>
-                  <div class="row numbers-row">
-                     <button value="7" class="number buttons buton btn">7</button>
-                     <button value="8" class="number buttons buton btn">8</button>
-                     <button value="9" class="number buttons buton btn">9</button>
-                     <button value="multiplication" class="operator buttons buton btn">X</button>
-                  </div>
-                  <div class="row numbers-row">
-                     <button value="4" class="number buttons buton btn">4</button>
-                     <button value="5" class="number buttons buton btn">5</b>
-                     <button value="6" class="number buttons buton btn">6</button>
-                     <button value="subtraction" class="operator buttons buton btn">-</button>
-                  </div>
-                  <div class="row numbers-row">
-                     <button value="1" class="number buttons buton btn">1</button>
-                     <button value="2" class="number buttons buton btn">2</button>
-                     <button value="3" class="number buttons buton btn">3</button>
-                     <button value="addition" class="operator buttons buton btn">+</button>
-                  </div>
-                  <div class="row numbers-row">
-                     <button value="00" class="number buttons buton btn">00</b>
-                     <button value="0" class="number buttons buton btn">0</>
-                     <button value="comma" class="number buttons buton btn">.</button>
-                     <button value="equals" class="operator buttons buton btn">=</button>
-                  </div>
-               </div>
+   <header>
+      <h1>CALCUL-A-TRON-1500</h1>
+   </header>
+   <section class="main">
+      <div class="calculator">
+         <div class="display-area">
+            <span></span>
+            <span></span>
+         </div>
+         <div class="buttons-wrapper">
+            <div class="buttons-grid">
+               <button value="ac" class="utility button btn first-row">AC</button>
+               <button value="sqrt" class="hidden utility button btn first-row">V-</button>
+               <button value="pi" class="hidden utility button btn first-row">PI</button>
+               <button value="modulus" class="hidden utility button btn first-row">%</button>
+               <button value="7" class="number button btn">7</button>
+               <button value="8" class="number button btn">8</button>
+               <button value="9" class="number button btn">9</button>
+               <button value="division" class="operator button btn">÷</button>
+               <button value="4" class="number button btn">4</button>
+               <button value="5" class="number button btn">5</button>
+               <button value="6" class="number button btn">6</button>
+               <button value="multiplication" class="operator button btn">x</button>
+               <button value="1" class="number button btn">1</button>
+               <button value="2" class="number button btn">2</button>
+               <button value="3" class="number button btn">3</button>
+               <button value="subtraction" class="operator button btn">-</button>
+               <button value="0" class="button btn">0</button>
+               <button value="." class=" utility button btn">,</button>
+               <button value="equals" class="operator button btn">=</button>
+               <button value="addition" class="operator button btn">+</button>
             </div>
          </div>
+      </div>
    </section>
-
+   <footer>
+      <a href="https://github.com/furkanssarri" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> furkanssarri
+      <script>
+         document.write(new Date().getFullYear());
+      </script>
+      </a>
+   </footer>
    <script defer src="js/app.js"></script>
    <!--Bootstrap JS-->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
-
 </html>

@@ -8,22 +8,31 @@ section {
    .display-area {
       border: 1px solid #000;
       height: 50px;
-      // width: 97.5%;
-      justify-content: center;
-      align-items: center;
+      text-align: end;
 
-      span:first-child {
-         background-color: rgb(49, 133, 207);
+
+      span{
+         padding: 1px;
+         margin: 1px;
+         min-height: 24px;
+         display: block;
       }
+      
+
+      
    }
 
    
    .calculator {
       display: flex;
+      width: 400px!important;
       .numbers {
+         width: 100%;
          border-right: 1px solid #000;
+         gap: 5px;
          .numbers-row {
             margin-left: 0!important;
+            gap: 5px;
             // width: 97.5%;
             .utility {
                background-color: #a4e2f7!important;
@@ -36,8 +45,8 @@ section {
             }
             .buttons {
                // max-width: 10%;
-               width: 51.7px;
-               height: auto;
+               // width: 51.7px;
+               // height: auto;
             }
          }
       }
@@ -54,10 +63,7 @@ section {
    border-bottom: 1px solid #000!important;
    border-left: 1px solid #000!important;
    border-radius: 0px !important;
-   // margin: 1%;
-   // paddingt: 5% !important;
-   width: auto;
-   height: auto;
+   
 }
 #equals {
    width: 103.6px;

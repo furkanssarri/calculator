@@ -1,0 +1,152 @@
+:root {
+   /* Light Theme Colors */
+   --background-light: #dce5e3;
+   --font-light: #333;
+   --border-light: #333;
+   --btn-light: #eee;
+   --calculator-light: #aaa;
+   --footer-light: #c6c6c6;
+
+   /* Dark Theme Colors */
+   --background-dark: #2c2c2c;
+   --font-dark: #cdcdcd;
+   --boder-dark: #cdcdcd;
+
+   /* Global Colors */
+   /* --display: #04b124; */
+   --display: #456966;
+}
+
+@font-face {
+   font-family:digital-7mono;
+   src: url('../assets/digital-7/digital-7mono.ttf');
+}
+
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+html {
+   /* footer support */
+   position: relative;
+   min-height: 100%;
+}
+
+body {
+   background-color: var(--background-light);
+   color: var(--font-light);
+   font-family: 'Roboto', sans-serif;
+   line-height: 1.6;
+   /* footer support */
+   margin-bottom: 100px;
+   overflow: hidden;
+}
+
+header {
+   text-align: center;
+   padding-top: 1%;
+   font-family: digital-7mono;
+   letter-spacing: 0.8em;
+}
+
+section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   height: 88vh;
+   min-height: 500px;
+}
+
+.calculator {
+   align-items: center;
+   padding: 40px;
+   margin: 20px;
+   width: 400px;
+   border: 2px solid var(--border-light);
+   background-color: var(--calculator-light);
+   border-radius: 25px;
+}
+
+.display-area {
+   padding: 10px 20px;
+   border: 2px solid var(--border-light);
+   border-radius: 5px;
+   margin-bottom: 30px;
+   background-color: var(--display);
+   text-align: right;
+   word-wrap: break-word;
+   word-break: break-all;
+   min-height: 90px;
+   font-family: digital-7mono;
+   color: #000;
+}
+
+.display-area span:first-child {
+   min-height: 32px;
+   font-size: 20px;
+   display: block;
+}
+
+.display-area span:last-child{
+   min-height: 64px;
+   font-size: 40px;
+   display: block;
+}
+
+.buttons-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 10px;
+}
+
+.button {
+   border: none;
+   color: inherit;
+   font-family: inherit;
+   font-size: inherit;
+   cursor: pointer;
+   outline: none;
+}
+
+.btn {
+   padding: 20px;
+   border: 2px var(--border-light) solid;
+   border-radius: 5px;
+   background-color: var(--btn-light);
+   font-size: 20px;
+}
+
+.first-row {
+   margin-bottom: 20px;
+}
+
+.utility {
+   background-color: #5ae3e3;
+}
+
+.operator {
+   background-color: #e97e9c;
+}
+
+footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+}
+
+footer a {
+   text-decoration: none;
+   color: var(--font-light);
+   font-size: 1.1em;
+}
+
+.hidden{
+   visibility: hidden;
+} 
