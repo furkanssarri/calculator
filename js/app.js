@@ -2,7 +2,7 @@
 const digits = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
 const utilities = document.querySelectorAll(".utility");
-const buttons = document.querySelectorAll(".buton");
+const buttons = document.querySelectorAll(".button");
 const displayFirst = document.querySelector(".display-area span:first-child");
 const displaySecond = document.querySelector(".display-area span:last-child");
 
@@ -27,13 +27,22 @@ function eventListeners() {
    utilities.forEach(utility => {
       utility.addEventListener("click", e => {
          if (e.target.value === "modulus") {
-            return;
+
          } else if (e.target.value === "ac") {
             displayFirst.textContent = "";
             displaySecond.textContent = "";
             firstOperand = "";
             secondOperand = "";
             operator = null;
+         } else if (e.target.value === "point") {
+            displaySecond.textContent += ".";
+         } else if (e.target.value === "sqrt") {
+            let sqrt = Math.sqrt(firstOperand);
+            displaySecond.textContent = "";
+            displayResults(true);
+            evaluate(sqrt);
+         } else if (e.target.value === "c") {
+            deleteNum();
          }
       })
    });
@@ -65,12 +74,39 @@ function eventListeners() {
                displayFirst.textContent += `${firstOperand} ${oprText} `;
                displaySecond.textContent = "";
             }
-         } else if (e.target.value === ".") {
-            return displaySecond.textContent += ".";
-         } 
-         else {
+         } else {
             operate(firstOperand, secondOperand, operator);
             displayResults(true);
+         }
+      });
+   });
+
+   // Listen to the keypress
+   window.addEventListener("keypress", e => {
+      let keyValue = e.key;
+      if (e.key === "Enter") keyValue = "equals";
+      if (e.key === "+") keyValue = "addition";
+      if (e.key === "-") keyValue = "subtraction";
+      if (e.key === "*") keyValue = "multiplication";
+      if (e.key === "/") keyValue = "division";
+      if (e.key === "%") keyValue = "modulus";
+      if (e.key === "v") keyValue = "sqrt";
+      if (e.key === ".") keyValue = "point";
+      buttons.forEach(button => {
+         if (button.value == keyValue) {
+            button.click();
+         }
+      });
+   });
+
+   window.addEventListener("keydown", e => {
+      let keyValue = e.key;
+      if (e.key === "Escape") keyValue = "ac";
+      if (e.key === "Backspace") keyValue = "c";
+      // Backspace delete soon to be implemented.
+      utilities.forEach(utility => {
+         if (utility.value == keyValue) {
+            utility.click();
          }
       });
    });
@@ -78,6 +114,18 @@ function eventListeners() {
 
 
 // Code
+
+function deleteNum() {
+   let currentValue = displaySecond.textContent = displaySecond.textContent
+      .toString()
+      .slice(0, -1);
+   if (!firstOperand) {
+      firstOperand = currentValue;
+   } else {
+      secondOperand = currentValue;
+   }
+
+}
 
 
 
@@ -149,6 +197,9 @@ function getOprText(operator) {
          break;
       case "division":
          oprText = "÷";
+         break;
+      case "modulus":
+         oprText = "%";
          break;
       default: return "";
          break;
