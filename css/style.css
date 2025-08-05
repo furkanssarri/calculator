@@ -39,6 +39,11 @@ section .calculator .numbers .numbers-row .number {
 section .calculator .numbers .numbers-row .operator {
   background-color: #f7a4c7;
 }
+section .calculator .numbers .numbers-row .buttons {
+  max-width: 10%;
+  width: 51.7px;
+  height: auto;
+}
 section .calculator .operators {
   display: flex;
   flex-direction: column;
